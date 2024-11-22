@@ -19,3 +19,10 @@ export function updateAssignment(assignmentId, assignmentUpdates) {
   Object.assign(assignment, assignmentUpdates);
   return assignment;
 }
+
+export function deleteAssignment(assignmentId) {
+  const { assignments } = Database;
+  Database.assignments = assignments.filter(
+    (assignment) => assignment._id !== assignmentId
+  );
+}

@@ -4,14 +4,15 @@ import "dotenv/config";
 import Lab5 from "./Lab5/index.js";
 import PathParameters from "./Lab5/PathParameters.js";
 import QueryParameters from "./Lab5/QUeryParameters.js";
-import CourseRoutes from "./Courses/routes.js";
-import ModuleRoutes from "./Modules/routes.js";
+import CourseRoutes from "./Kanbas/Courses/routes.js";
+import ModuleRoutes from "./Kanbas/modules/routes.js";
 
 import WorkingWithObjects from "./Lab5/WorkingWithObjects.js";
 import WorkingWithArrays from "./Lab5/WorkingWithArrays.js";
-import UserRoutes from "./Users/routes.js";
+import UserRoutes from "./Kanbas/Users/routes.js";
 import session from "express-session";
 import cors from "cors";
+import AssignmentRoutes from "./Kanbas/Assignments/routes.js";
 
 const app = express();
 app.use(
@@ -48,5 +49,6 @@ WorkingWithArrays(app);
 UserRoutes(app);
 CourseRoutes(app);
 ModuleRoutes(app);
+AssignmentRoutes(app);
 
 app.listen(process.env.PORT || 4000);
