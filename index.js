@@ -6,6 +6,7 @@ import PathParameters from "./Lab5/PathParameters.js";
 import QueryParameters from "./Lab5/QUeryParameters.js";
 import CourseRoutes from "./Kanbas/Courses/routes.js";
 import ModuleRoutes from "./Kanbas/modules/routes.js";
+import mongoose from "mongoose";
 
 import WorkingWithObjects from "./Lab5/WorkingWithObjects.js";
 import WorkingWithArrays from "./Lab5/WorkingWithArrays.js";
@@ -14,6 +15,9 @@ import session from "express-session";
 import cors from "cors";
 import AssignmentRoutes from "./Kanbas/Assignments/routes.js";
 
+const CONNECTION_STRING =
+  process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas";
+mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(
   cors({
