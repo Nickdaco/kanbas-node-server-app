@@ -5,7 +5,7 @@ import Lab5 from "./Lab5/index.js";
 import PathParameters from "./Lab5/PathParameters.js";
 import QueryParameters from "./Lab5/QUeryParameters.js";
 import CourseRoutes from "./Kanbas/Courses/routes.js";
-import ModuleRoutes from "./Kanbas/modules/routes.js";
+import ModuleRoutes from "./Kanbas/Modules/routes.js";
 import mongoose from "mongoose";
 
 import WorkingWithObjects from "./Lab5/WorkingWithObjects.js";
